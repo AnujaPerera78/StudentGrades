@@ -14,12 +14,13 @@ import java.awt.event.ActionEvent;
 public class StudentGrades extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField txtTest1;
+	private JTextField txtTest2;
+	private JTextField txtTest3;
+	private JTextField txtTest4;
+	private JTextField txtFirstName;
+	private JTextField txtLastName;
 	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
 
 	/**
 	 * Launch the application.
@@ -48,10 +49,10 @@ public class StudentGrades extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Student Grades");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel.setBounds(214, 10, 115, 57);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitle = new JLabel("Student Grades");
+		lblTitle.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblTitle.setBounds(214, 10, 115, 57);
+		contentPane.add(lblTitle);
 		
 		JLabel lblFirstName = new JLabel("First Name");
 		lblFirstName.setBounds(10, 84, 90, 35);
@@ -77,54 +78,59 @@ public class StudentGrades extends JFrame {
 		lblTest4.setBounds(10, 282, 45, 13);
 		contentPane.add(lblTest4);
 		
-		JButton btnNewButton = new JButton("Add");
-		btnNewButton.setBounds(244, 152, 85, 21);
-		contentPane.add(btnNewButton);
+		JButton btnAdd = new JButton("Add");
+		btnAdd.setBounds(244, 152, 85, 21);
+		contentPane.add(btnAdd);
 		
-		JButton btnNewButton_1 = new JButton("Student Average");
-		btnNewButton_1.setBounds(360, 152, 133, 21);
-		contentPane.add(btnNewButton_1);
+		JButton btnStudentAverage = new JButton("Student Average");
+		btnStudentAverage.setBounds(360, 152, 133, 21);
+		contentPane.add(btnStudentAverage);
 		
-		JButton btnNewButton_2 = new JButton("List");
-		btnNewButton_2.setBounds(244, 183, 85, 21);
-		contentPane.add(btnNewButton_2);
+		JButton btnList = new JButton("List");
+		btnList.setBounds(244, 183, 85, 21);
+		contentPane.add(btnList);
 		
-		JButton btnNewButton_3 = new JButton("Course Average");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JButton btnCourseAverage = new JButton("Course Average");
+		btnCourseAverage.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton_3.setBounds(360, 183, 134, 21);
-		contentPane.add(btnNewButton_3);
+		btnCourseAverage.setBounds(360, 183, 134, 21);
+		contentPane.add(btnCourseAverage);
+		
+		txtTest1 = new JTextField();
+		txtTest1.setBounds(59, 153, 96, 19);
+		contentPane.add(txtTest1);
+		txtTest1.setColumns(10);
+		
+		txtTest2 = new JTextField();
+		txtTest2.setBounds(59, 196, 96, 19);
+		contentPane.add(txtTest2);
+		txtTest2.setColumns(10);
+		
+		txtTest3 = new JTextField();
+		txtTest3.setColumns(10);
+		txtTest3.setBounds(59, 237, 96, 19);
+		contentPane.add(txtTest3);
+		
+		txtTest4 = new JTextField();
+		txtTest4.setColumns(10);
+		txtTest4.setBounds(59, 279, 96, 19);
+		contentPane.add(txtTest4);
+		
+		txtFirstName = new JTextField();
+		txtFirstName.setColumns(10);
+		txtFirstName.setBounds(79, 92, 96, 19);
+		contentPane.add(txtFirstName);
+		
+		txtLastName = new JTextField();
+		txtLastName.setColumns(10);
+		txtLastName.setBounds(320, 92, 96, 19);
+		contentPane.add(txtLastName);
 		
 		textField = new JTextField();
-		textField.setBounds(59, 153, 96, 19);
+		textField.setBounds(189, 214, 291, 220);
 		contentPane.add(textField);
 		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(59, 196, 96, 19);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
-		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(59, 237, 96, 19);
-		contentPane.add(textField_2);
-		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(59, 279, 96, 19);
-		contentPane.add(textField_3);
-		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(79, 92, 96, 19);
-		contentPane.add(textField_4);
-		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(320, 92, 96, 19);
-		contentPane.add(textField_5);
 	}
 }
