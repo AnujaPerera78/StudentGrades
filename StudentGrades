@@ -1,0 +1,130 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class StudentGrades extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					StudentGrades frame = new StudentGrades();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public StudentGrades() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 562, 481);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Student Grades");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel.setBounds(214, 10, 115, 57);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblFirstName = new JLabel("First Name");
+		lblFirstName.setBounds(10, 84, 90, 35);
+		contentPane.add(lblFirstName);
+		
+		JLabel lblLastName = new JLabel("Last Name");
+		lblLastName.setBounds(251, 89, 59, 24);
+		contentPane.add(lblLastName);
+		
+		JLabel lblTest1 = new JLabel("Test 1");
+		lblTest1.setBounds(10, 153, 59, 18);
+		contentPane.add(lblTest1);
+		
+		JLabel lblTest2 = new JLabel("Test 2");
+		lblTest2.setBounds(10, 199, 45, 13);
+		contentPane.add(lblTest2);
+		
+		JLabel lblTest3 = new JLabel("Test 3");
+		lblTest3.setBounds(10, 240, 45, 13);
+		contentPane.add(lblTest3);
+		
+		JLabel lblTest4 = new JLabel("Test 4");
+		lblTest4.setBounds(10, 282, 45, 13);
+		contentPane.add(lblTest4);
+		
+		JButton btnNewButton = new JButton("Add");
+		btnNewButton.setBounds(244, 152, 85, 21);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Student Average");
+		btnNewButton_1.setBounds(360, 152, 133, 21);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("List");
+		btnNewButton_2.setBounds(244, 183, 85, 21);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("Course Average");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_3.setBounds(360, 183, 134, 21);
+		contentPane.add(btnNewButton_3);
+		
+		textField = new JTextField();
+		textField.setBounds(59, 153, 96, 19);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(59, 196, 96, 19);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(59, 237, 96, 19);
+		contentPane.add(textField_2);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(59, 279, 96, 19);
+		contentPane.add(textField_3);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(79, 92, 96, 19);
+		contentPane.add(textField_4);
+		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(320, 92, 96, 19);
+		contentPane.add(textField_5);
+	}
+}
